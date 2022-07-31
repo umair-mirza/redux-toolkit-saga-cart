@@ -12,6 +12,7 @@ export const Logo = styled.h1`
 `
 
 export const Cart = styled.div`
+    cursor: pointer;
     position: relative;
 `
 

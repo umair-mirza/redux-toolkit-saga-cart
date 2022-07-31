@@ -1,7 +1,11 @@
 import { ThemeProvider } from "styled-components";
 import { Container } from "./components/styles/Container.styled";
+import { Heading } from "./components/styles/Heading.styled";
 import Header from "./components/Header";
 import GlobalStyles from "./components/styles/globalStyles";
+import { MainContainer } from "./components/styles/MainContainer.styled";
+import CartItem from "./components/CartItem";
+import { StyledCartItem } from "./components/styles/CartItem.styled";
 
 const theme = {
   colors: {
@@ -19,9 +23,12 @@ function App() {
     <GlobalStyles />
     <Header />
     <Container>
-      <div>
-        Hello
-      </div>
+      <Heading>
+        YOUR BAG
+      </Heading>
+      <MainContainer>
+          <CartItem />
+      </MainContainer>
     </Container>
     </ThemeProvider>
     </>
