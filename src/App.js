@@ -22,6 +22,7 @@ const theme = {
 
 function App() {
   const {cartItems} = useSelector((state) => state.cart)
+  const {isOpen} = useSelector((state) => state.modal)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -40,7 +41,7 @@ function App() {
       <MainContainer>
           <CartItems />
       </MainContainer>
-      <Modal />
+      {isOpen && <Modal />}
     </Container>
     </ThemeProvider>
     </>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledModal = styled.div`
     background-color: #fff;
     margin: 0 auto;
-    display: none;
+    display: block;
     padding: 15px 20px;
     border-radius: 5px;
     box-shadow: 0 0 0 5px #ccc;

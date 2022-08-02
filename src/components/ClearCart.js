@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { clearCart } from "../features/cart/cartSlice"
+import { openModal } from "../features/modal/modalSlice"
 import { StyledButton } from "./styles/Button.styled"
 import { StyledClearCart } from "./styles/ClearCart.styled"
 
@@ -10,7 +10,7 @@ const ClearCart = () => {
   return (
     <>
         <StyledClearCart>
-            <StyledButton color={'#922b21'} onClick={() => dispatch(clearCart())}>
+            <StyledButton color={'#922b21'} onClick={() => dispatch(openModal())}>
                 Clear Cart
             </StyledButton>
         </StyledClearCart>
