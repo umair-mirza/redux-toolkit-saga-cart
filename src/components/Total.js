@@ -14,7 +14,7 @@ const Total = () => {
                     Total:
                 </div>
                 <div>
-                    ${total}
+                    ${total.toFixed(2)}
                 </div>
             </Flex>
         </StyledTotal>

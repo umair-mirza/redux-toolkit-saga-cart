@@ -36,7 +36,12 @@ const CartItem = () => {
                     <StyledQuantity>
                         <FaAngleUp color={'#839192'} onClick={() => dispatch(increase(item))} />
                             {item.amount}
-                        <FaAngleDown color={'#839192'} onClick={() => dispatch(decrease(item))} />
+                        <FaAngleDown color={'#839192'} onClick={() =>
+                            {
+                                if(item.amount === 1) {
+                                    dispatch(removeItem(item.id))
+                                }
+                            dispatch(decrease(item))}} />
                     </StyledQuantity>
                 </div>
             </Flex>  

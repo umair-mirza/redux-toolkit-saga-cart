@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { calculateTotals } from "./features/cart/cartSlice";
 import { ThemeProvider } from "styled-components";
 import { Container } from "./components/styles/Container.styled";
 import { Heading } from "./components/styles/Heading.styled";
@@ -15,10 +18,16 @@ const theme = {
     buttonBlue: '#000080',
   },
   backgroundColor: '#F0FFFF',
-
 }
 
 function App() {
+  const {cartItems} = useSelector((state) => state.cart)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(calculateTotals())
+  }, [cartItems])
+
   return (
     <>
     <ThemeProvider theme={theme}>
