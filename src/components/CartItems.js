@@ -1,4 +1,5 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { removeItem } from "../features/cart/cartSlice";
 import { StyledCartItem, StyledDescription, StyledTitle, StyledPrice, StyledRemove, StyledMobile, StyledQuantity } from "./styles/CartItem.styled"
 import { EmptyCart } from "./styles/EmptyCart.styled";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
@@ -8,6 +9,7 @@ import ClearCart from "./ClearCart";
 
 const CartItem = () => {
     const {cartItems} = useSelector((state) => state.cart)
+    const dispatch = useDispatch()
 
   return (
     <>
@@ -26,7 +28,7 @@ const CartItem = () => {
                         <StyledDescription>
                             <StyledTitle>{item.title}</StyledTitle>
                             <StyledPrice>{`$${item.price}`}</StyledPrice>
-                            <StyledRemove>remove</StyledRemove>
+                            <StyledRemove onClick={() => dispatch(removeItem(item.id))}>remove</StyledRemove>
                         </StyledDescription>
                     </StyledCartItem>
                 </div>
