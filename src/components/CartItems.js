@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeItem } from "../features/cart/cartSlice";
+import { removeItem, increase, decrease } from "../features/cart/cartSlice";
 import { StyledCartItem, StyledDescription, StyledTitle, StyledPrice, StyledRemove, StyledMobile, StyledQuantity } from "./styles/CartItem.styled"
 import { EmptyCart } from "./styles/EmptyCart.styled";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
@@ -34,9 +34,9 @@ const CartItem = () => {
                 </div>
                 <div>
                     <StyledQuantity>
-                        <FaAngleUp color={'#839192'} />
+                        <FaAngleUp color={'#839192'} onClick={() => dispatch(increase(item))} />
                             {item.amount}
-                        <FaAngleDown color={'#839192'} />
+                        <FaAngleDown color={'#839192'} onClick={() => dispatch(decrease(item))} />
                     </StyledQuantity>
                 </div>
             </Flex>  
