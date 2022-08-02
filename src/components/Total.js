@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux"
 import { Flex } from "./styles/Flex.styled"
 import { StyledTotal, StyledLine } from "./styles/Total.styled"
 
 const Total = () => {
+    const {total} = useSelector((state) => state.cart)
+
   return (
     <>
         <StyledLine />
@@ -11,7 +14,7 @@ const Total = () => {
                     Total:
                 </div>
                 <div>
-                    $2199.86
+                    ${total}
                 </div>
             </Flex>
         </StyledTotal>
