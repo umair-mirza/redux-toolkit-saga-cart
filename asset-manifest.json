@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/redux-toolkit-saga-cart/static/js/main.a260ea8b.js",
+    "index.html": "/redux-toolkit-saga-cart/index.html",
+    "main.a260ea8b.js.map": "/redux-toolkit-saga-cart/static/js/main.a260ea8b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.a260ea8b.js"
+  ]
+}
