@@ -8,6 +8,6 @@ Following packages have been used in this project:
 * redux-saga
 * styled-components
 
-Published URL: 
+Published URL: https://umair-mirza.github.io/redux-toolkit-saga-cart/
 
 
